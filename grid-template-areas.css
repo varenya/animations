@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-areas:
+    "header"
+    "aside"
+    "section"
+    "footer";
+  grid-template-rows: 2fr 6fr 2fr 2fr;
+  grid-gap: 5px;
+}
+
+@media (min-width: 400px) {
+  .container {
+    grid-template-areas:
+      "header header"
+      "aside section"
+      "footer footer";
+    grid-template-columns: 2fr 6fr;
+    grid-template-rows: 2fr 6fr 2fr;
+  }
+}
+
+.container > * {
+  font-size: 30px;
+  background: dodgerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header {
+  grid-area: header;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.section {
+  grid-area: section;
+}

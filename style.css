@@ -1,0 +1,91 @@
+html,
+body {
+  font-family: "Thasadith", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+.form-field {
+  padding: 20px;
+}
+.text-field {
+  padding: 10px;
+}
+
+.form-field > .text-field:valid + .submit-button {
+  transform: none;
+  opacity: 1;
+}
+
+.submit-button {
+  padding: 12px 20px;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  background: #3187f2;
+  margin-left: -4px;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: transform ease-in-out 0.6s, opacity ease-in-out 0.6s;
+}
+
+.container > * {
+  background: mediumseagreen;
+  color: #fff;
+  font-size: 80px;
+}
+.container {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-areas:
+    "header"
+    "section"
+    "aside-2"
+    "aside-1"
+    "footer";
+}
+
+@media (min-width: 700px) {
+  .container {
+    grid-template-areas:
+      "header header header"
+      "aside-1 section aside-2"
+      "footer footer footer";
+  }
+}
+
+header {
+  grid-area: header;
+}
+
+section {
+  grid-area: section;
+}
+
+aside:nth-of-type(1) {
+  grid-area: aside-1;
+}
+
+aside:nth-of-type(2) {
+  grid-area: aside-2;
+}
+
+footer {
+  grid-area: footer;
+}

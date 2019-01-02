@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.css-articles {
+  display: flex;
+  scroll-snap-type: mandatory;
+  scroll-snap-destination: 0% 100%;
+  scroll-snap-points-x: repeat(100%);
+  flex-flow: row nowrap;
+}
+.article-item {
+  scroll-snap-align: start;
+  padding: 40px;
+  background: palevioletred;
+  color: #fff;
+  margin: 0 5%;
+  font-size: 40px;
+  flex: 0 0 90%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
